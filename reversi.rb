@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative './lib/reversi_methods'
-require 'debug'
 
 class Reversi
   include ReversiMethods
