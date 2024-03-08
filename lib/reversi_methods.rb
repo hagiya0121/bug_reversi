@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative './position'
-require 'debug'
 
 module ReversiMethods
   WHITE_STONE = 'W'
@@ -64,7 +63,7 @@ module ReversiMethods
   def turn(board, target_pos, attack_stone_color, direction)
     if target_pos.out_of_board? ||
        target_pos.stone_color(board) == attack_stone_color ||
-       target_pos.stone_color(board) == '-'
+       target_pos.stone_color(board) == BLANK_CELL
       return false
     end
 
